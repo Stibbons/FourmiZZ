@@ -1,0 +1,363 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Fourmi
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- Thorax (1)
+//         |
+//         |--- tete (2)
+//         |
+//         |--- abdomen (3)
+//         |
+//         |--- patte avant droite (4)
+//         |
+//         |--- patte avant gauche (5)
+//         |
+//         |--- patte millieu droite (6)
+//         |
+//         |--- patte millieu gauche (7)
+//         |
+//         |--- patte arrière droite (8)
+//         |
+//         |--- patte arrière gauche (9)
+
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -2.2  0 -3.0
+                   2.2  0 -3.0
+                   2.2  0  2.5
+                  -2.3  0  2.5
+                  -2.3  1.8 -3.0
+                   2.2  1.8 -3.0
+                   2.2  1.8  2.5
+                  -2.3  1.8  2.5 ;
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 1.1 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Thorax (fils de root)
+ElementID = 1;
+  BoundingBox =   -0.5 -0.5 -0.8
+                   0.5 -0.5 -0.8
+                   0.5  0.5 -0.8
+                  -0.5  0.5 -0.8
+                  -0.5 -0.5  0.8
+                   0.5 -0.5  0.8
+                   0.5  0.5  0.8
+                  -0.5  0.5  0.8;
+  Object3D = major-thorax.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0  0.0  0.0   // pos
+                           0.0  0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =  0.0  0.0  0.0   // pos
+                           0.0  0.0  0.0;  // dir
+      AnimFramePosition =  0.0  0.03  0.0   // pos
+                           0.0  5.0  0.0;  // dir
+      AnimFramePosition =  0.0  0.02  0.0   // pos
+                           0.0  3.0  0.0;  // dir
+      AnimFramePosition =  0.0  0.01  0.0   // pos
+                           0.0  0.0  0.0;  // dir
+                           
+  ChildrenNumber = 8;
+  Children = 2 3 4 5 6 7 8 9;
+  // fils de Thorax : les 6 pattes, la tetes et l'abdomen
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Abdomen  (fils de Thorax)
+ElementID = 2;
+  BoundingBox =   -0.8 -0.4 -2.8
+                   0.8 -0.4 -2.8
+                   0.8 -0.4  0.2
+                  -0.8 -0.4  0.2 
+                  -0.8  0.8 -2.8
+                   0.8  0.8 -2.8
+                   0.8  0.8  0.2
+                  -0.8  0.8  0.2;
+  Object3D = major-abdomen.3ds;
+  ParticlePos  = -0.0   -0.0  2.8
+                  0.0    0.5  4.0;
+  ParticleName = Attack;       // nom de la particle
+
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  0.0   // pos
+                            0.0    0.0  0.0;  // dir
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  0.0   // pos
+                            0.0    0.0  0.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// tête  (fils de Thorax)
+ElementID = 3;
+  BoundingBox =   -0.3 -0.28 -0.1
+                   0.3 -0.28 -0.1
+                   0.3 -0.28  0.9
+                  -0.3 -0.28  0.9 
+                  -0.3  0.26 -0.1
+                   0.3  0.26 -0.1
+                   0.3  0.26  0.9
+                  -0.3  0.26  0.9;
+
+  Object3D = major-head.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName = default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  0.5   // pos
+                            0.0    0.0  0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0   0.0  0.5   // pos
+                            0.0   0.0  0.0;  // dir
+      AnimFramePosition =   0.0   0.0  0.5   // pos
+                            0.0  -5.0  0.0;  // dir
+      AnimFramePosition =   0.0   0.0  0.5   // pos
+                            0.0   0.0  0.0;  // dir
+      AnimFramePosition =   0.0   0.0  0.5   // pos
+                            0.0  -5.0  0.0;  // dir
+  ChildrenNumber = 0;
+  //Children = NULL;
+  
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 1  (fils de Thorax) : avant droite
+ElementID = 4;  
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = major-front-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0    0.0   0.0;   // dir
+
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0    0.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0  -25.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0  -50.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0  -30.0   0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+  
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 2  (fils de Thorax) : avant gauche
+ElementID = 5;
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = major-front-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   0.0   0.3   // pos
+                            0.0   0.0   0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0    0.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0   25.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0   -5.0   0.0;   // dir
+      AnimFramePosition =   0.0    0.0   0.3   // pos
+                            0.0  -25.0   0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+  
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 3  (fils de Thorax) : millieu droite
+ElementID = 6;
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = major-middle-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0  0.0  -0.1   // pos
+                            0.0  0.0  0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0   0.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0 -15.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0  15.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0   5.0  0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+  
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 4  (fils de Thorax) : millieu gauche
+ElementID = 7;
+  BoundingBox =   -0.05 -1.05 -0.1
+                   0.6  -1.05 -0.1
+                   0.6  -1.05  1.7
+                  -0.05 -1.05  1.7 
+                  -0.05  0.05 -0.1
+                   0.6   0.05 -0.1
+                   0.6   0.05  1.7
+                  -0.05  0.05  1.7;
+  Object3D = major-middle-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0   0.0  0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0   0.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0  15.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0 -15.0  0.0;   // dir
+      AnimFramePosition =   0.0   0.0  -0.1   // pos
+                            0.0  -5.0  0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 5  (fils de Thorax) : arriere droite
+ElementID = 8;
+  BoundingBox =   -0.05 -1.05 -0.1
+                   0.6  -1.05 -0.1
+                   0.6  -1.05  1.7
+                  -0.05 -1.05  1.7 
+                  -0.05  0.05 -0.1
+                   0.6   0.05 -0.1
+                   0.6   0.05  1.7
+                  -0.05  0.05  1.7;
+  Object3D = major-back-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName = default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0   0.0    0.0;   // dir
+  AnimName = Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0 -20.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0   0.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0  15.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0  5.0    0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 6  (fils de Thorax) : arrière gauche
+ElementID = 9;
+  BoundingBox =   -0.05  -1.05 -0.1
+                   0.6 -1.05 -0.1
+                   0.6 -1.05  1.7
+                  -0.05  -1.05  1.7 
+                  -0.05   0.05 -0.1
+                   0.6  0.05 -0.1
+                   0.6  0.05  1.7
+                  -0.05   0.05  1.7;
+  Object3D = major-back-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =    0.0   0.0  -0.2    // pos
+                             0.0   0.0   0.0;   // dir
+  AnimName = Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0 -20.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0   0.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0  15.0    0.0;   // dir
+      AnimFramePosition =   0.0   0.0   -0.2    // pos
+                            0.0  5.0    0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+EndOfFile
+
+A partir de maintenant on peut mettre tout le texte que l'on veut sans 
+commentaire!!

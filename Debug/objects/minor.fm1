@@ -1,0 +1,276 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Hydralisk
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- Tete (partie supérieure du corps) (1)
+//         |
+//         |--- queue (2)
+//         |
+//         |--- pattre droite (3)
+//         |
+//         |--- patte gauche (4)
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -1.9  -2.0 -2.9
+                   1.9  -2.0 -2.9
+                   1.9  -2.0  2.3
+                  -1.9  -2.0  2.3
+                  -1.9   3.7 -2.9
+                   1.9   3.7 -2.9
+                   1.9   3.7  2.3
+                  -1.9   3.7  2.3 ;
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 2.0 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Tete (partie supérieure du corps)  (fils de root)
+ElementID = 1;
+  BoundingBox =   -0.8 -0.1 -1.1
+                   0.8 -0.1 -1.1
+                   0.8 -0.1  2.4
+                  -0.8 -0.1  2.4
+                  -0.8  3.5 -1.1
+                   0.8  3.5 -1.1
+                   0.8  3.5  2.4
+                  -0.8  3.5  2.4;
+  Object3D = hydralisk-head.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0   0.3  0.0   // pos
+                           0.0   0.0  0.0;  // dir
+ 
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 5;
+      AnimFramePosition =  0.0   0.0  0.0   // pos
+                          -10.0  0.0  0.0;  // dir
+      AnimFramePosition =  0.0   0.0  0.0   // pos
+                          -30.0  0.0  0.0;  // dir
+      AnimFramePosition =  0.0   0.0  0.0   // pos
+                          -10.0  0.0  0.0;  // dir
+      AnimFramePosition =  0.0   0.0  0.0   // pos
+                           0.0   0.0  0.0;  // dir
+      AnimFramePosition =  0.0   0.0  0.0   // pos
+                           0.0   0.0  0.0;  // dir
+
+  ChildrenNumber = 3;
+  Children = 2 3 4;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// queue  (fils de Torax)
+ElementID = 2;
+  BoundingBox =   -3.1 -1.5 -0.5
+                   1.0 -1.5 -0.5
+                   1.0 -1.5  0.5
+                  -3.1 -1.5  0.5 
+                  -3.1  0.4 -0.5
+                   1.0  0.4 -0.5
+                   1.0  0.4  0.5
+                  -3.1  0.4  0.5;
+  Object3D = hydralisk-tail.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0   0.0   // pos
+                            0.0    0.0   0.0;  // dir
+
+
+
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 5;
+      AnimFramePosition =   0.0   -0.3   0.0   // pos
+                            0.0    0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.3   1.5   // pos
+                            0.0    0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.3   0.0   // pos
+                            0.0    0.0  -2.0;  // dir
+      AnimFramePosition =   0.0   -0.3   0.0   // pos
+                            0.0   10.0  -3.5;  // dir
+      AnimFramePosition =   0.0   -0.3   0.0   // pos
+                            0.0   10.0   -2.0   // dir
+
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte droite  (fils de Torax)
+ElementID = 3;
+  BoundingBox =   -0.25 -2.5 -0.4
+                   1.6  -2.5 -0.4
+                   1.6  -2.5  1.0
+                  -0.25 -2.5  1.0 
+                  -0.25  0.55 -0.4
+                   1.6   0.55 -0.4
+                   1.6   0.55  1.0
+                  -0.25  0.55  1.0;
+
+  Object3D = hydralisk-right.3ds;
+  
+  // cet élément peut prendre un objet : une graine
+  // position où mettre la graine:
+  ObjectAimPos =  -0.5   -1.0  0.8
+                  0.0    0.0  0.0;
+  ObjectAimName = Seed;       // nom de l'objet qu'il peut prendre
+  ObjectTakeAnim = TakeSeed;  // nom de l'animation à jouer avant d'attacher
+  ObjectDropAnim = DropSeed;  // nom de l'animation à jouer avant de dropper
+
+
+  AnimNumber = 6;
+  AnimDefault = default;
+  AnimName = default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+
+  AnimName = Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 5;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            -15.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            -30.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            -15.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            -15.0  0.0   0.0;   // dir
+
+  AnimName = TakeSeed;
+    AnimNext = TakeSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+
+  AnimName = TakeSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+
+  AnimName = DropSeed;
+    AnimNext = DropSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+
+  AnimName = DropSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte gauche
+ElementID = 4;  
+  BoundingBox =    0.25 -2.5 -0.4
+                  -1.6  -2.5 -0.4
+                  -1.6  -2.5  1.0
+                   0.25 -2.5  1.0 
+                   0.25  0.55 -0.4
+                  -1.6   0.55 -0.4
+                  -1.6   0.55  1.0
+                   0.25  0.55  1.0;
+  Object3D = hydralisk-left.3ds;
+  
+  AnimNumber = 6;
+  AnimDefault = default;
+  
+  // Animation : default
+  // animation par défaut, l'élément est immobile
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+                          
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                          -15.0  0.0   0.0;   // dir
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                          -30.0  0.0   0.0;   // dir
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                          -15.0  0.0   0.0;   // dir
+ 
+  AnimName = TakeSeed;
+    AnimNext = TakeSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+
+  AnimName = TakeSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+                            
+  AnimName = DropSeed;
+    AnimNext = DropSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+      AnimFramePosition =   0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+
+  AnimName = DropSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            30.0  0.0   0.0;   // dir
+      AnimFramePosition =  -0.5  1.2  -0.4    // pos
+                            0.0  0.0   0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+EndOfFile
+
+A partir de maintenant on peut mettre tout le texte que l'on veut sans 
+commentaire!!

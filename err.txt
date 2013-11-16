@@ -1,0 +1,700 @@
+CMap.cpp:954: warning: multiline `//' comment
+In file included from CMap.cpp:1:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from sounds.h:3,
+                 from CMap.cpp:6:
+lib/CSoundManager.h: At top level:
+lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.h:50,
+                 from CMap.cpp:7:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from lib/C3DObject.h:6,
+                 from objects.h:58,
+                 from CMap.cpp:7:
+lib/3dsloader.h:24: warning: ignoring pragma: 
+CMap.cpp: In method `void CMap::Init(Map_Settings)':
+CMap.cpp:233: warning: comparison between signed and unsigned
+CMap.cpp:265: warning: comparison between signed and unsigned
+CMap.cpp:283: warning: comparison between signed and unsigned
+main.cpp:55: warning: `/*' within comment
+In file included from objects.h:5,
+                 from sceneio.h:5,
+                 from main.cpp:10:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from sounds.h:3,
+                 from Menu.h:19,
+                 from objects.h:7,
+                 from sceneio.h:5,
+                 from main.cpp:10:
+lib/CSoundManager.h: At top level:
+lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.h:50,
+                 from sceneio.h:5,
+                 from main.cpp:10:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from lib/C3DObject.h:6,
+                 from objects.h:58,
+                 from sceneio.h:5,
+                 from main.cpp:10:
+lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_ants.h:5,
+                 from main.cpp:14:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from objects.h:5,
+                 from Menu.h:16,
+                 from Menu.cpp:1:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from objects.h:9,
+                 from Menu.h:16,
+                 from Menu.cpp:1:
+lib/CSoundManager.h: At top level:
+lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.h:50,
+                 from Menu.h:16,
+                 from Menu.cpp:1:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from lib/C3DObject.h:6,
+                 from objects.h:58,
+                 from Menu.h:16,
+                 from Menu.cpp:1:
+lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from Menu.cpp:6:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+Menu.cpp: In method `void menu::Render()':
+Menu.cpp:120: warning: comparison between signed and unsigned
+Menu.cpp:120: warning: comparison between signed and unsigned
+Menu.cpp:121: warning: comparison between signed and unsigned
+Menu.cpp:121: warning: comparison between signed and unsigned
+Menu.cpp:143: warning: comparison between signed and unsigned
+Menu.cpp:143: warning: comparison between signed and unsigned
+Menu.cpp:144: warning: comparison between signed and unsigned
+Menu.cpp:144: warning: comparison between signed and unsigned
+Menu.cpp:167: warning: comparison between signed and unsigned
+Menu.cpp:167: warning: comparison between signed and unsigned
+Menu.cpp:168: warning: comparison between signed and unsigned
+Menu.cpp:168: warning: comparison between signed and unsigned
+Menu.cpp: In method `void menu::Change_Option(options_list, int)':
+Menu.cpp:756: warning: enumeration value `MATSIZE' not handled in switch
+Menu.cpp:756: warning: enumeration value `FARMAX' not handled in switch
+Menu.cpp: In method `BOOL menu::Menuio(int, int, int)':
+Menu.cpp:778: warning: comparison between signed and unsigned
+Menu.cpp:778: warning: comparison between signed and unsigned
+Menu.cpp:779: warning: comparison between signed and unsigned
+Menu.cpp:779: warning: comparison between signed and unsigned
+Menu.cpp:792: warning: comparison between signed and unsigned
+Menu.cpp:792: warning: comparison between signed and unsigned
+Menu.cpp:793: warning: comparison between signed and unsigned
+Menu.cpp:793: warning: comparison between signed and unsigned
+Menu.cpp:804: warning: enumeration value `BLEND_T' not handled in switch
+Menu.cpp: In method `BOOL menu::processevents()':
+Menu.cpp:835: warning: enumeration value `MAP_MODE' not handled in switch
+In file included from Minimap.cpp:2:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from objects.cpp:4:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from objects.cpp:5:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from objects.cpp:5:
+AI/../lib/3dsloader.h: At top level:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from objects.cpp:5:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from objects.cpp:5:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.cpp:12:
+lib/CBubbleText.h: In method `CBubbleTexture::CBubbleTexture()':
+lib/CBubbleText.h:13: warning: member initializers for `bool CBubbleTexture::m_enabled'
+lib/CBubbleText.h:14: warning:   and `unsigned int CBubbleTexture::m_gltexid'
+lib/CBubbleText.h:29: warning:   will be re-ordered to match declaration order
+lib/CBubbleText.h: In method `CBubbleTexture::CBubbleTexture(float, float, float, unsigned int, int, float, float, bool)':
+lib/CBubbleText.h:13: warning: member initializers for `bool CBubbleTexture::m_enabled'
+lib/CBubbleText.h:14: warning:   and `unsigned int CBubbleTexture::m_gltexid'
+lib/CBubbleText.h:41: warning:   will be re-ordered to match declaration order
+lib/CBubbleText.h:15: warning: member initializers for `unsigned int CBubbleTexture::m_glmasktexid'
+lib/CBubbleText.h:16: warning:   and `bool CBubbleTexture::m_texmasked'
+lib/CBubbleText.h:41: warning:   will be re-ordered to match declaration order
+objects.cpp: At top level:
+objects.cpp:33: warning: converting NULL to non-pointer type
+objects.cpp:44: warning: converting NULL to non-pointer type
+In file included from objects.h:5,
+                 from sceneio.h:5,
+                 from scene.cpp:10:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from sounds.h:3,
+                 from Menu.h:19,
+                 from objects.h:7,
+                 from sceneio.h:5,
+                 from scene.cpp:10:
+lib/CSoundManager.h: At top level:
+lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.h:50,
+                 from sceneio.h:5,
+                 from scene.cpp:10:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from lib/C3DObject.h:6,
+                 from objects.h:58,
+                 from sceneio.h:5,
+                 from scene.cpp:10:
+lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from scene.cpp:14:
+lib/CBubbleText.h: In method `CBubbleTexture::CBubbleTexture()':
+lib/CBubbleText.h:13: warning: member initializers for `bool CBubbleTexture::m_enabled'
+lib/CBubbleText.h:14: warning:   and `unsigned int CBubbleTexture::m_gltexid'
+lib/CBubbleText.h:29: warning:   will be re-ordered to match declaration order
+lib/CBubbleText.h: In method `CBubbleTexture::CBubbleTexture(float, float, float, unsigned int, int, float, float, bool)':
+lib/CBubbleText.h:13: warning: member initializers for `bool CBubbleTexture::m_enabled'
+lib/CBubbleText.h:14: warning:   and `unsigned int CBubbleTexture::m_gltexid'
+lib/CBubbleText.h:41: warning:   will be re-ordered to match declaration order
+lib/CBubbleText.h:15: warning: member initializers for `unsigned int CBubbleTexture::m_glmasktexid'
+lib/CBubbleText.h:16: warning:   and `bool CBubbleTexture::m_texmasked'
+lib/CBubbleText.h:41: warning:   will be re-ordered to match declaration order
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from scene.cpp:17:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from objects.h:5,
+                 from sceneio.h:5,
+                 from sceneio.cpp:3:
+CMap.h: In method `CMap::~CMap()':
+CMap.h:215: warning: comparison between signed and unsigned
+In file included from sounds.h:3,
+                 from Menu.h:19,
+                 from objects.h:7,
+                 from sceneio.h:5,
+                 from sceneio.cpp:3:
+lib/CSoundManager.h: At top level:
+lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from objects.h:50,
+                 from sceneio.h:5,
+                 from sceneio.cpp:3:
+lib/particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+lib/particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from lib/C3DObject.h:6,
+                 from objects.h:58,
+                 from sceneio.h:5,
+                 from sceneio.cpp:3:
+lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from sceneio.cpp:6:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+sceneio.cpp: In function `void io_motion(int, int, int, int)':
+sceneio.cpp:106: warning: unused variable `float ns'
+sceneio.cpp: In function `void io_mouse(int, int, int)':
+sceneio.cpp:160: warning: `GLdouble' used for argument 1 of `glReadPixels(int, int, int, int, unsigned int, unsigned int, GLvoid *)'
+sceneio.cpp:160: warning: `GLdouble' used for argument 2 of `glReadPixels(int, int, int, int, unsigned int, unsigned int, GLvoid *)'
+sceneio.cpp:136: warning: unused variable `int b'
+sceneio.cpp:135: warning: unused variable `int a'
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_ants.h:5,
+                 from AI/AI_ants.cpp:2:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_ants.h:5,
+                 from AI/AI_ants.cpp:2:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_ants.h:5,
+                 from AI/AI_ants.cpp:2:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_ants.h:5,
+                 from AI/AI_ants.cpp:2:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_ants.h:5,
+                 from AI/AI_ants.cpp:2:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_ants.cpp: In method `void aiHarvester::live()':
+AI/AI_ants.cpp:225: warning: enumeration value `LOOK_FOR_A_NEW_SOURCE_OF_FOOD' not handled in switch
+AI/AI_ants.cpp:225: warning: enumeration value `RETURN_TO_NEST_WITH_INFO_ABOUT_FOOD' not handled in switch
+AI/AI_ants.cpp:225: warning: enumeration value `HUNT_ANTS' not handled in switch
+AI/AI_ants.cpp: In method `void aiHarvester::do_wander_around_nest_waiting_for_found_food_pheromone()':
+AI/AI_ants.cpp:257: warning: suggest parentheses around assignment used as truth value
+AI/AI_ants.cpp: In method `void aiHarvester::do_follow_found_food_pheromone_to_find_food()':
+AI/AI_ants.cpp:285: warning: suggest parentheses around assignment used as truth value
+AI/AI_ants.cpp: In method `void aiHarvester::do_go_back_to_the_nest_looking_for_food()':
+AI/AI_ants.cpp:312: warning: suggest parentheses around assignment used as truth value
+AI/AI_ants.cpp: In method `void aiScout::live()':
+AI/AI_ants.cpp:387: warning: enumeration value `WANDER_AROUND_NEST_WAITING_FOR_FOUND_FOOD_PHEROMONE' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `FOLLOW_FOUND_FOOD_PHEROMONE_TO_FIND_FOOD' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `GO_BACK_TO_THE_NEST_LOOKING_FOR_FOOD' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `BRING_FOOD_TO_THE_NEST' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `ENTER_THE_NEST_TO_STORE_FOOD' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `PUT_FOOD_IN_THE_GRANARY' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `GET_OUT_OF_THE_NEST' not handled in switch
+AI/AI_ants.cpp:387: warning: enumeration value `HUNT_ANTS' not handled in switch
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_enemies.h:4,
+                 from AI/AI_enemies.cpp:1:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_enemies.h:4,
+                 from AI/AI_enemies.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_enemies.h:4,
+                 from AI/AI_enemies.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_enemies.h:4,
+                 from AI/AI_enemies.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_enemies.h:4,
+                 from AI/AI_enemies.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_enemies.cpp: In method `void aiSpider::live()':
+AI/AI_enemies.cpp:20: warning: enumeration value `WANDER_AROUND_NEST_WAITING_FOR_FOUND_FOOD_PHEROMONE' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `FOLLOW_FOUND_FOOD_PHEROMONE_TO_FIND_FOOD' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `GO_BACK_TO_THE_NEST_LOOKING_FOR_FOOD' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `BRING_FOOD_TO_THE_NEST' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `ENTER_THE_NEST_TO_STORE_FOOD' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `PUT_FOOD_IN_THE_GRANARY' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `LOOK_FOR_A_NEW_SOURCE_OF_FOOD' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `RETURN_TO_NEST_WITH_INFO_ABOUT_FOOD' not handled in switch
+AI/AI_enemies.cpp:20: warning: enumeration value `GET_OUT_OF_THE_NEST' not handled in switch
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_environment.cpp:1:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_environment.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_environment.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_environment.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_environment.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_graphic_objects.cpp:1:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_graphic_objects.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/../objects.h:5,
+                 from AI/AI_graphic_objects.cpp:3:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_graphic_objects.cpp:3:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_graphic_objects.cpp:4:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_nest_impl.h:4,
+                 from AI/AI_nest.h:137,
+                 from AI/AI_nest.cpp:1:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_nest_impl.h:4,
+                 from AI/AI_nest.h:137,
+                 from AI/AI_nest.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_nest_impl.h:4,
+                 from AI/AI_nest.h:137,
+                 from AI/AI_nest.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_nest_impl.h:4,
+                 from AI/AI_nest.h:137,
+                 from AI/AI_nest.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_environment.h:4,
+                 from AI/AI_nest_impl.h:4,
+                 from AI/AI_nest.h:137,
+                 from AI/AI_nest.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_nest.cpp: In method `void aiNest::ai_update()':
+AI/AI_nest.cpp:30: warning: enumeration value `ROCK' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `SEED' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `MAJOR' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `SPIDER' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `WEED' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `REDFLOWER' not handled in switch
+AI/AI_nest.cpp:30: warning: enumeration value `MUSHROOM' not handled in switch
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_objects.cpp:1:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_objects.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_world.h:8,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_objects.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/ai_objects_impl.h:5,
+                 from AI/AI_objects.h:150,
+                 from AI/AI_objects.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_objects.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/AI_world.h:8,
+                 from AI/AI_renders.h:4,
+                 from AI/AI_renders.cpp:6:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from AI/AI_renders.cpp:6:
+AI/../lib/3dsloader.h: At top level:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from AI/AI_renders.cpp:6:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from AI/AI_renders.cpp:6:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders.h:4,
+                 from AI/AI_renders.cpp:6:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+AI/AI_renders.cpp: In method `aiGraphicWorld::aiGraphicWorld(aiWorld &)':
+AI/AI_world.h:101: warning: member initializers for `class aiObject * aiGraphicWorld::highlighted_object_'
+AI/AI_world.h:111: warning:   and `int aiGraphicWorld::rendered_token_'
+AI/AI_renders.cpp:20: warning:   will be re-ordered to match declaration order
+AI/AI_renders.cpp: In method `void aiGraphicWorld::render_highlighted_object()':
+AI/AI_renders.cpp:70: warning: `float' used for argument 3 of `gluSphere(GLUquadric *, double, int, int)'
+AI/AI_renders.cpp:70: warning: `float' used for argument 4 of `gluSphere(GLUquadric *, double, int, int)'
+AI/AI_renders.cpp: In method `void aiGraphicWorld::render_every_object_on_minimap()':
+AI/AI_renders.cpp:159: warning: `const float' used for argument 1 of `glVertex2i(int, int)'
+AI/AI_renders.cpp:159: warning: `const float' used for argument 2 of `glVertex2i(int, int)'
+In file included from AI/AI_world.h:8,
+                 from AI/AI_renders_in_menu.h:4,
+                 from AI/AI_renders_in_menu.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders_in_menu.h:4,
+                 from AI/AI_renders_in_menu.cpp:1:
+AI/../lib/3dsloader.h: At top level:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders_in_menu.h:4,
+                 from AI/AI_renders_in_menu.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders_in_menu.h:4,
+                 from AI/AI_renders_in_menu.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/AI_renders_in_menu.h:4,
+                 from AI/AI_renders_in_menu.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+In file included from AI/AI_world.h:8,
+                 from AI/AI_world.cpp:1:
+AI/../CMap.h: In method `CMap::~CMap()':
+AI/../CMap.h:215: warning: comparison between signed and unsigned
+In file included from AI/../lib/C3DObject.h:6,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_world.cpp:1:
+AI/../lib/3dsloader.h: At top level:
+AI/../lib/3dsloader.h:24: warning: ignoring pragma: 
+In file included from AI/../lib/C3DObject.h:9,
+                 from AI/AI_graphic_objects.h:5,
+                 from AI/AI_objects.h:5,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_world.cpp:1:
+AI/../lib/Particles.h:199: warning: `class CParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:230: warning: `class CConstantParticleSystem' has virtual functions but non-virtual destructor
+AI/../lib/Particles.h:253: warning: `class CCastParticleSystem' has virtual functions but non-virtual destructor
+In file included from AI/AI_objects.h:150,
+                 from AI/AI_world_impl.h:10,
+                 from AI/AI_world.h:288,
+                 from AI/AI_world.cpp:1:
+AI/ai_objects_impl.h: In method `aiObject::aiObject(aiWorld &, const vect2f &)':
+AI/AI_objects.h:14: warning: member initializers for `struct aiGraphicObject * aiObject::g_obj_'
+AI/AI_objects.h:53: warning:   and `class aiWorld & aiObject::world_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+AI/AI_objects.h:63: warning: member initializers for `bool aiObject::active_'
+AI/AI_objects.h:66: warning:   and `enum action_type aiObject::action_'
+AI/ai_objects_impl.h:20: warning:   will be re-ordered to match declaration order
+In file included from AI/../sounds.h:3,
+                 from AI/../Menu.h:19,
+                 from AI/../objects.h:7,
+                 from AI/AI_world_impl.h:12,
+                 from AI/AI_world.h:288,
+                 from AI/AI_world.cpp:1:
+AI/../lib/CSoundManager.h: At top level:
+AI/../lib/CSoundManager.h:3: warning: ignoring pragma: 
+AI/AI_world.cpp: In function `void init_world(aiWorld *&, basic_string<char,string_char_traits<char>,__default_alloc_template<false,0> >, Map_Settings &)':
+AI/AI_world.cpp:69: warning: comparison between signed and unsigned
+AI/AI_world.cpp:74: warning: comparison between signed and unsigned
+AI/AI_world.cpp:76: warning: comparison between signed and unsigned
+AI/AI_world.cpp:82: warning: comparison between signed and unsigned
+AI/AI_world.cpp:87: warning: comparison between signed and unsigned
+AI/AI_world.cpp:92: warning: comparison between signed and unsigned
+AI/AI_world.cpp:13: warning: unused variable `uint initial_minutes'
+AI/AI_world.cpp:12: warning: unused variable `uint initial_hours'
+AI/AI_world.cpp: In method `aiSector::aiSector()':
+AI/AI_world.h:24: warning: member initializers for `class aiRing<aiObject> aiSector::stuff_'
+AI/AI_world.h:27: warning:   and `struct aiToken aiSector::tokens_[2]'
+AI/AI_world.cpp:146: warning:   will be re-ordered to match declaration order
+AI/AI_world.cpp: In method `aiWorld::aiWorld(unsigned int)':
+AI/AI_world.h:152: warning: member initializers for `class aiRing<aiToken> aiWorld::tokens_[2]'
+AI/AI_world.h:231: warning:   and `class CMap * aiWorld::map_'
+AI/AI_world.cpp:179: warning:   will be re-ordered to match declaration order
+g++: `lib/*.c: No such file or directory
+g++: lib/*.cpp`: Invalid argument
+make: *** [fourmi_simul] Error 1

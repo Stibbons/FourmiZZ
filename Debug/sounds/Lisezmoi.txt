@@ -1,0 +1,7 @@
+Dans ce dossier il devrait y avoir plus de fichier, mais pour des raisons évidentes de droit d'auteur, nous ne sommes pas en mesure de les distribuer (car évidement, ce n'est pas nous qui les avont fait, ses sons...).
+
+Bref, si vous voulez ajouter une musique d'ambiance, un son à la création d'une fourmis, et un son quand on clique sur un bouton, rajouter les fichiers en les nommant:
+
+- bclic.wav : quand on clique sur un bouton
+- main1.ogg : musique d'ambiance (à l'origine Vanessa Mae Happy Valley ça allait bien...)
+- creation.wav: jouer lors de la création d'une fourmi (originalement "My Live For Hirer" (??) des Zealots de Starcraft...

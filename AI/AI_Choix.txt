@@ -1,0 +1,49 @@
+------------------------
+MISE À JOUR DES SECTEURS
+------------------------
+
+J'ai choisi de ne mettre à jour les secteurs (en ce qui concerne la quantité de phéromones qu'ils
+contiennent) que quand une fonction accède à ses paramètres dépendants du temps. C'est pourquoi un
+secteur contient le champ last_time_updated_.
+Le choix n'a pas été très difficile. Etant donné le nombre important des secteurs, une mise à jour
+régulière de tous les secteurs était irréalisable.
+J'ai pensé à une mise à jour de quelques secteurs par frame, mais cela conduit inévitablement à des
+erreurs dans le calcul de la tendance des phéromones.
+La méthode que j'ai choisie coûte 4 octets en plus dans chaque secteur, mais les performances ne
+sont que très peu affectées par la gestion du temps dans ce cas.
+
+
+------------------------------
+LE CHAMP sector_ DANS aiOBJECT
+------------------------------
+
+Ses "coordonnées" (coords2d_) et son "monde" (world_) induisent directement avec un calcul
+le secteur auquel appartient un objet. Cependant j'ai préféré ajouter un champ sector_ (4 octets)
+pour ne pas avoir à effectuer ce calcul effectué à chaque frame pour chaque objet du monde.
+
+
+-----------------
+LE JOUR S'ÉCOULE.
+-----------------
+
+Lorsque qu'un monde est créé (appel au constructeur de aiWorld ), le temps écoulé est initialisé
+à 0, ce qui correspond au lever du soleil.
+Dans le simulateur, une journée dure VIRTUAL_DAY frames.
+
+
+---------------------------
+LA FOURMILIÈRE HYPOTHÉTIQUE
+---------------------------
+
+Plus une fourmi est éloignée de la fourmillière, plus son idée de son emplacement devrait être vague.
+Mais je ne l'ai pas encore implémenté, n'ayant pas d'idée sur la façon dont ça se passe quand on
+perd son chemin.
+Donc, pour l'instant, leur sens de l'orientation est parfait.
+
+------------------
+TYPEID FAIT MAISON
+------------------
+
+J'ai utilisé une sorte de "typeid" fait maison, que je n'appelle pas dans le but d'éviter les
+fonctions virtuelles mais pour que les fourmis puissent reconnaître un autre objet.
+Exemple : ça se mange, ça ?

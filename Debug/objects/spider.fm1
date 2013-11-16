@@ -1,0 +1,448 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Fourmi
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- Boby (1)
+//         |
+//         |--- patte avant droite (2)
+//         |
+//         |--- patte avant gauche (3)
+//         |
+//         |--- patte avant-millieu droite (4)
+//         |
+//         |--- patte avant-millieu gauche (5)
+//         |
+//         |--- patte arrière-millieu droite (6)
+//         |
+//         |--- patte arrière-millieu gauche (7)
+//         |
+//         |--- patte arrière droite (8)
+//         |
+//         |--- patte arrière gauche (9)
+
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -2.2  0 -3.0
+                   2.2  0 -3.0
+                   2.2  0  2.5
+                  -2.3  0  2.5
+                  -2.3  1.8 -3.0
+                   2.2  1.8 -3.0
+                   2.2  1.8  2.5
+                  -2.3  1.8  2.5 ;
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 1.7 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Corps (fils de root)
+ElementID = 1;
+  BoundingBox =   -0.95  0 -2.86
+                   0.95  0 -2.86
+                   0.95  0  1.24
+                  -0.95  0  1.24
+                  -0.95  1.7 -2.86
+                   0.95  1.7 -2.86
+                   0.95  1.7  1.24
+                  -0.95  1.7  1.24 ;
+  Object3D = spider-body.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0  0.0  0.0   // pos
+                           0.0  0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =  0.0  0.0   0.0   // pos
+                           0.0  0.0   0.0;  // dir
+      AnimFramePosition =  0.0  0.1   0.0   // pos
+                           0.0  0.0   0.0;  // dir
+      AnimFramePosition =  0.0  0.05  0.0   // pos
+                           0.0  0.0   0.0;  // dir
+      AnimFramePosition =  0.0  0.025 0.0   // pos
+                           0.0  0.0   0.0;  // dir
+
+  ChildrenNumber = 8;
+  Children = 2 3 4 5 6 7 8 9;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte avant droite
+ElementID = 2;
+  BoundingBox =    0.15 -0.4 -0.34
+                   1.70 -0.4 -0.34
+                   1.75 -0.4  3.7
+                   0.15 -0.4  3.7 
+                   0.15  1.25 -0.34
+                   1.70  1.25 -0.34
+                   1.70  1.25  3.7
+                   0.15  1.25  3.7;
+  Object3D = spider-front-right-paw.3ds;
+  AnimNumber = 3;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Attack;
+    AnimNext = default;
+    AnimFrameNumber = 3;
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           -10.0   0.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                          -15.0   -0.4 -5.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                          -20.0  -10.0 30.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                          -20.0  -39.0 30.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -68.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -38.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -23.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -16.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -0.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0  -0.0  0.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte avant gauche
+ElementID = 3;
+  BoundingBox =   -0.15 -0.4 -0.34
+                  -1.70 -0.4 -0.34
+                  -1.75 -0.4  3.7
+                  -0.15 -0.4  3.7 
+                  -0.15  1.25 -0.34
+                  -1.70  1.25 -0.34
+                  -1.70  1.25  3.7
+                  -0.15  1.25  3.7;
+  Object3D = spider-front-left-paw.3ds;
+  AnimNumber = 3;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Attack;
+    AnimNext = default;
+    AnimFrameNumber = 3;
+      AnimFramePosition =   0.0    0.2  0.3   // pos
+                           -10.0   0.0  0.0;  // dir
+      AnimFramePosition =   0.0    0.2  0.3   // pos
+                          -15.0    0.4 -5.0;  // dir
+      AnimFramePosition =   0.0    0.2  0.3   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   -0.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   -0.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                          -20.0   10.0 30.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                          -20.0   39.0 30.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   68.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   38.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   23.0  0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  0.3   // pos
+                           20.0   16.0  0.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte avant-millieu droite
+ElementID = 4;
+  BoundingBox =   0.15 -0.4 -0.34
+                  3.0 -0.4 -0.34
+                  3.0 -0.4  3.7
+                  0.15 -0.4  3.7 
+                  0.15  1.25 -0.34
+                  3.0  1.25 -0.34
+                  3.0  1.25  3.7
+                  0.15  1.25  3.7;
+  Object3D = spider-front-middle-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  0.0   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                          -20.0   15.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                          -20.0  -26.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0  // pos
+                           20.0  -20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                           20.0   10.0  6.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                           10.0   10.0 -6.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                           10.0   15.0 -6.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                          -20.0   20.0   0.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte avant-millieu gauche
+ElementID = 5;
+  BoundingBox =  -0.15 -0.4 -0.34
+                 -3.0 -0.4 -0.34
+                 -3.0 -0.4  3.7
+                 -0.15 -0.4  3.7 
+                 -0.15  1.25 -0.34
+                 -3.0  1.25 -0.34
+                 -3.0  1.25  3.7
+                 -0.15  1.25  3.7;
+  Object3D = spider-front-middle-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  0.0   // pos
+                            0.0    0.0  0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2   0.0   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2   0.0   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2   0.0   // pos
+                          -20.0   15.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2   0.0   // pos
+                          -20.0  -26.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2   0.0  // pos
+                           20.0  -20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2   0.0   // pos
+                           20.0   10.0  10.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                           10.0   10.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.0   // pos
+                           10.0   15.0 -15.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte arriere-millieu droite
+ElementID = 6;
+  BoundingBox =   0.15 -0.4 -2.12
+                  3.58 -0.4 -2.12
+                  3.58 -0.4 -0.02
+                  0.15 -0.4  -0.02 
+                  0.15  1.25 -2.12
+                  3.58  1.25 -2.12
+                  3.58  1.25 -0.02 
+                  0.15  1.25 -0.02 ;
+  Object3D = spider-back-middle-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                            0.0    0.0   0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  -0.15  // pos
+                           20.0   -0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           20.0   10.0  10.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           10.0   10.0  -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           10.0   15.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0   15.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0   -6.0   0.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte arriere-millieu gauche
+ElementID = 7;
+  BoundingBox =  -0.15 -0.4 -2.12
+                 -3.58 -0.4 -2.12
+                 -3.58 -0.4 -0.02
+                 -0.15 -0.4  -0.02 
+                 -0.15  1.25 -2.12
+                 -3.58  1.25 -2.12
+                 -3.58  1.25 -0.02 
+                 -0.15  1.25 -0.02 ;
+  Object3D = spider-back-middle-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                            0.0    0.0   0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0  -23.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0  -16.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15  // pos
+                           20.0    0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           20.0  -10.0  10.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           10.0  -10.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                           10.0  -29.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0  -38.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.15   // pos
+                          -20.0  -38.0   0.0;  // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte arriere droite
+ElementID = 8;
+  BoundingBox =   0.16 -0.4 -3.76
+                  2.48 -0.4 -3.76
+                  2.48 -0.4 -0.02
+                  0.16 -0.4  -0.02 
+                  0.16  1.25 -3.76
+                  2.48  1.25 -3.76
+                  2.48  1.25 -0.02 
+                  0.16  1.25 -0.02 ;
+  Object3D = spider-back-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                            0.0    0.0   0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   0.0    0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0  -7.0    0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3  // pos
+                           -5.0  -15.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                           -5.0   10.0  10.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                           -2.0   10.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                            0.0   15.0 -15.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// patte arriere gauche
+ElementID = 9;
+  BoundingBox =  -0.16 -0.4 -3.76
+                 -2.48 -0.4 -3.76
+                 -2.48 -0.4 -0.02
+                 -0.16 -0.4  -0.02 
+                 -0.16  1.25 -3.76
+                 -2.48  1.25 -3.76
+                 -2.48  1.25 -0.02 
+                 -0.16  1.25 -0.02 ;
+  Object3D = spider-back-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                            0.0    0.0   0.0;  // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 8;
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                           -2.0   0.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                            0.0   0.0 -15.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0   0.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3   // pos
+                          -20.0  -15.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3  // pos
+                           -5.0  -25.0   0.0;  // dir
+      AnimFramePosition =   0.0   -0.2  -0.3  // pos
+                           -5.0   10.0  10.0;  // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+EndOfFile
+

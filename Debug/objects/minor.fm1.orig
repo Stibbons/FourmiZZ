@@ -1,0 +1,612 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Fourmi
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- Thorax (1)
+//         |
+//         |--- Abdomen (2)
+//         |
+//         |--- tete (3)
+//         |
+//         |--- patte avant   droite (4)
+//         |
+//         |--- patte milieu  droite (5)
+//         |
+//         |--- patte arrière droite (5)
+//         |
+//         |--- patte avant   gauche(4)
+//         |
+//         |--- patte milieu  gauche(5)
+//         |
+//         |--- patte arrière gauche(5)
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -2.2  0 -3.0
+                   2.2  0 -3.0
+                   2.2  0  2.5
+                  -2.3  0  2.5
+                  -2.3  1.8 -3.0
+                   2.2  1.8 -3.0
+                   2.2  1.8  2.5
+                  -2.3  1.8  2.5 ;
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 0.0 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Thorax (fils de root)
+ElementID = 1;
+  BoundingBox =   -0.5 -0.5 -0.8
+                   0.5 -0.5 -0.8
+                   0.5  0.5 -0.8
+                  -0.5  0.5 -0.8
+                  -0.5 -0.5  0.8
+                   0.5 -0.5  0.8
+                   0.5  0.5  0.8
+                  -0.5  0.5  0.8;
+  Object3D = minor-thorax.3ds;
+  AnimNumber = 6;
+  AnimDefault = default;
+  
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+                           
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.900  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.800  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+
+  AnimName= WalkToWalkWithSeed;
+    AnimNext = WalkWithSeed;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           0.5   0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.900  0.8   // pos
+                          20.5   0.0    0.0;  // dir
+
+  AnimName= WalkWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.900  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.800  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+
+  AnimName= WalkWithSeedToWalk;
+    AnimNext = default;
+    AnimFrameNumber = 2;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+      AnimFramePosition =  0.0   0.900  0.8   // pos
+                           0.5   0.0    0.0;  // dir
+
+  AnimName= StayWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           20.5  0.0    0.0;  // dir
+
+
+  ChildrenNumber = 8;
+  Children = 2 3 4 5 6 7 8 9;
+  // fils de Thorax : les 6 pattes, la tetes et l'abdomen
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Abdomen  (fils de Thorax)
+ElementID = 2;
+  BoundingBox =   -0.8 -0.4 -2.8
+                   0.8 -0.4 -2.8
+                   0.8 -0.4  0.2
+                  -0.8 -0.4  0.2 
+                  -0.8  0.8 -2.8
+                   0.8  0.8 -2.8
+                   0.8  0.8  0.2
+                  -0.8  0.8  0.2;
+  Object3D = minor-abdomen.3ds;
+  AnimNumber = 6;
+  AnimDefault = default;
+  
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0    0.0   0.0;  // dir
+                            
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0    4.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0    2.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0   -2.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0   -4.0   0.0;  // dir
+
+  AnimName= WalkToWalkWithSeed;
+    AnimNext = WalkWithSeed;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0   10.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   10.0   0.0;  // dir
+
+  AnimName= WalkWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   10.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   20.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   10.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0    0.0   0.0;  // dir
+
+  AnimName= WalkWithSeedToWalk;
+    AnimNext = Walk;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   10.0   0.0;  // dir
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                            0.0   10.0   0.0;  // dir
+
+  AnimName= StayWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  -0.8   // pos
+                          -25.0   10.0   0.0;  // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+// tête  (fils de Thorax)
+ElementID = 3;
+  BoundingBox =   -0.3 -0.28 -0.1
+                   0.3 -0.28 -0.1
+                   0.3 -0.28  0.9
+                  -0.3 -0.28  0.9 
+                  -0.3  0.26 -0.1
+                   0.3  0.26 -0.1
+                   0.3  0.26  0.9
+                  -0.3  0.26  0.9;
+
+  Object3D = minor-head.3ds;
+  AnimNumber = 5;
+  AnimDefault = default;
+  AnimName = default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    0.0  0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    0.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    5.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    0.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0   -5.0  0.0;   // dir
+  AnimName= HeadLeftTurn;
+    AnimNext = HeadLeft;
+    AnimFrameNumber = 4;                            
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    0.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -10.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -20.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -30.0  0.0;   // dir
+  AnimName= HeadLeft;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;                            
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -30.0  0.0;   // dir
+  AnimName= HeadLeftReTurn;
+    AnimNext = default;
+    AnimFrameNumber = 4;                            
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -30.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -20.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0  -10.0  0.0;   // dir
+      AnimFramePosition =   0.0    0.0  0.75   // pos
+                            0.0    0.0  0.0;   // dir
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 1  (fils de Thorax) : avant droite
+ElementID = 4;  
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = minor-right-paw.3ds;
+  
+  // cet élément peut prendre un objet : une Seed
+  // position où mettre la Seed:
+  ObjectAimPos = -1.1   -1.0  0.8
+                  0.0    0.0  0.0;
+  ObjectAimName = Seed;       // nom de l'objet qu'il peut prendre
+  ObjectTakeAnim = TakeSeed;  // nom de l'animation à jouer avant d'attacher
+  ObjectDropAnim = DropSeed;  // nom de l'animation à jouer avant de dropper
+  
+  AnimNumber = 7;
+  AnimDefault = default;
+  
+  // Animation : default
+  // animation par défaut, l'élément est immobile
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.24     0.15  0.26   // pos
+                            0.0    -70.0   0.0;   // dir
+
+
+  // Animation de marche (boucle)
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.24     0.15  0.26   // pos
+                            0.0    -70.0   0.0;   // dir
+      AnimFramePosition =   0.24     0.15  0.26   // pos
+                            0.0   -100.0   0.0;   // dir
+      AnimFramePosition =   0.24     0.15  0.26   // pos
+                            0.0   -130.0   0.0;   // dir
+      AnimFramePosition =   0.24     0.15  0.26   // pos
+                            0.0   -100.0   0.0;   // dir
+
+
+  // animation de prise d'une Seed
+  // Premiere partie: tendre la patte vers l'objet
+  AnimName= TakeSeed;
+    AnimNext = TakeSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0   -70.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0     0.0   0.0;   // dir
+
+  // Seconde partie (après que l'objet soit attaché à la patte)
+  // ramener la patte.
+  AnimName= TakeSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 3;
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0     0.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                          -15.0   -15.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                          -30.0   -35.0   0.0;   // dir
+
+  // 
+  AnimName= WalkWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =    0.24     0.15  0.26   // pos
+                           -30.0    -35.0   0.0;   // dir
+      AnimFramePosition =    0.24     0.15  0.26   // pos
+                           -30.0    -45.0   0.0;   // dir
+      AnimFramePosition =    0.24     0.15  0.26   // pos
+                           -30.0    -50.0   0.0;   // dir
+      AnimFramePosition =    0.24     0.15  0.26   // pos
+                           -30.0    -40.0   0.0;   // dir
+
+
+  // même principe, mais pour dopper (jetter) l'objet.
+  AnimName= DropSeed;
+    AnimNext = DropSeedEnd;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                          -30.0   -70.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                          -15.0     0.0   0.0;   // dir
+                            
+  AnimName= DropSeedEnd;
+    AnimNext = default;
+    AnimFrameNumber = 3;
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0     0.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0   -35.0   0.0;   // dir
+      AnimFramePosition =   0.24    0.15  0.26   // pos
+                            0.0   -70.0   0.0;   // dir
+
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 2  (fils de Thorax) : milieu droite
+ElementID = 5;
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = minor-right-paw.3ds;
+  AnimNumber = 3;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0   -120.0    0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0   -115.0    0.0;   // dir
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0    -95.0    0.0;   // dir
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0   -115.0    0.0;   // dir
+      AnimFramePosition =   0.36    0.15   -0.14   // pos
+                            0.0   -130.0    0.0;   // dir
+
+  AnimName= WalkWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0   -115.0    0.0;   // dir
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0    -95.0   20.0;   // dir
+      AnimFramePosition =   0.36     0.15  -0.14   // pos
+                            0.0   -115.0    0.0;   // dir
+      AnimFramePosition =   0.36    0.15   -0.14   // pos
+                            0.0   -130.0    0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 3  (fils de Thorax) : arriere droite
+ElementID = 6;
+  BoundingBox =   -0.6  -1.05 -0.1
+                   0.05 -1.05 -0.1
+                   0.05 -1.05  1.7
+                  -0.6  -1.05  1.7 
+                  -0.6   0.05 -0.1
+                   0.05  0.05 -0.1
+                   0.05  0.05  1.7
+                  -0.6   0.05  1.7;
+  Object3D = minor-right-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.3     0.10  -0.45   // pos
+                            0.0  -160.0    0.0;   // dir
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   0.3     0.10  -0.45   // pos
+                            0.0  -160.0    0.0;   // dir
+      AnimFramePosition =   0.3     0.10  -0.45   // pos
+                            0.0  -190.0    0.0;   // dir
+      AnimFramePosition =   0.3     0.10  -0.45   // pos
+                            0.0  -160.0    0.0;   // dir
+      AnimFramePosition =   0.3     0.10  -0.45   // pos
+                            0.0  -130.0    0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 4  (fils de Thorax) : avant gauche
+ElementID = 7;
+  BoundingBox =   -0.05  -1.05 -0.1
+                   0.6 -1.05 -0.1
+                   0.6 -1.05  1.7
+                  -0.05  -1.05  1.7 
+                  -0.05   0.05 -0.1
+                   0.6  0.05 -0.1
+                   0.6  0.05  1.7
+                  -0.05   0.05  1.7;
+  Object3D = minor-left-paw.3ds;
+  
+  AnimNumber = 7;
+  
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+                             
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   130.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0    70.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+
+
+  AnimName= WalkToWalkWithSeed;
+    AnimNext = WalkWithSeed;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    50.0   0.0;   // dir
+
+  AnimName= WalkWithSeed;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    50.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    60.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    70.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    60.0   0.0;   // dir
+
+  AnimName= WalkWithSeedToWalk;
+    AnimNext = Walk;
+    AnimFrameNumber = 2;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                           -30.0    50.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+
+
+  AnimName= TakeSeed;
+    AnimNext = default;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0    70.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0    90.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   100.0   0.0;   // dir
+
+  AnimName= DropSeed;
+    AnimNext = default;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   130.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0     0.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0    70.0   0.0;   // dir
+      AnimFramePosition =   -0.24    0.15  0.26   // pos
+                             0.0   130.0   0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+  
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 5  (fils de Thorax) : milieu gauche
+ElementID = 8;
+  BoundingBox =   -0.05  -1.05 -0.1
+                   0.6 -1.05 -0.1
+                   0.6 -1.05  1.7
+                  -0.05  -1.05  1.7 
+                  -0.05   0.05 -0.1
+                   0.6  0.05 -0.1
+                   0.6  0.05  1.7
+                  -0.05   0.05  1.7;
+  Object3D = minor-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName = default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   -0.36    0.15  -0.14   // pos
+                             0.0   120.0    0.0;   // dir
+
+  AnimName = Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.36    0.15  -0.14   // pos
+                             0.0   115.0    0.0;   // dir
+      AnimFramePosition =   -0.36    0.15  -0.14   // pos
+                             0.0   130.0    0.0;   // dir
+      AnimFramePosition =   -0.36    0.15  -0.14   // pos
+                             0.0   115.0    0.0;   // dir
+      AnimFramePosition =   -0.36    0.15  -0.14   // pos
+                             0.0    90.0    0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Patte 6  (fils de Thorax) : arrière gauche
+ElementID = 9;
+  BoundingBox =   -0.05  -1.05 -0.1
+                   0.6 -1.05 -0.1
+                   0.6 -1.05  1.7
+                  -0.05  -1.05  1.7 
+                  -0.05   0.05 -0.1
+                   0.6  0.05 -0.1
+                   0.6  0.05  1.7
+                  -0.05   0.05  1.7;
+  Object3D = minor-left-paw.3ds;
+  AnimNumber = 2;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   -0.3    0.10  -0.45   // pos
+                             0.0  160.0    0.0;   // dir
+
+  AnimName= Walk;
+    AnimNext = NULL;
+    AnimFrameNumber = 4;
+      AnimFramePosition =   -0.3    0.10  -0.45   // pos
+                             0.0  160.0    0.0;   // dir
+      AnimFramePosition =   -0.3    0.10  -0.45   // pos
+                             0.0  130.0    0.0;   // dir
+      AnimFramePosition =   -0.3    0.10  -0.45   // pos
+                             0.0  160.0    0.0;   // dir
+      AnimFramePosition =   -0.3    0.10  -0.45   // pos
+                             0.0  190.0    0.0;   // dir
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+EndOfFile
+
+A partir de maintenant on peut mettre tout le texte que l'on veut sans 
+commentaire!!

@@ -1,0 +1,28 @@
+Guide de Style SEMET Gaetan
+===================
+Les classes instanciables débuttent par un C.
+Les interfaces, classes abstraites, débuttent par un I
+CClass
+IInterface
+Les templates commencent par la lettre T
+TTemplate
+
+Les variables membres d'une classes sont préfixés par m_.
+Les variables statique sont préfixés par ms_
+m_membre
+ms_static_membre
+
+Les fonctions des classes commencent par une majuscule et ne comportent pas d'underscore
+FonctionDeClasse
+
+Les variables globales sont préfixées par g_
+g_global_variable
+
+
+Les macros sont écrites en majuscule
+MACRO
+
+
+Autant que possible, les noms des fonctions globales commencent par le nom du fichier où ils sont:
+objects_* concerne toutes les fonctions du fichier objects.cpp, tga* concerne tous les fichiers
+du fichier tga.c . La présence d'underscore n'est pas obligatoire.

@@ -1,0 +1,72 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Herbe
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- Herbe (1)
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -15.0 -23.0 -15.0
+                   15.0 -23.0 -15.0
+                   15.0 -23.0  15.0
+                  -15.0 -23.0  15.0
+                  -15.0  2.4  -15.0
+                   15.0  2.4  -15.0
+                   15.0  2.4   15.0
+                  -15.0  2.4   15.0 ;
+ // ATTENTION : l'ordre de la bounding box est important
+ //  D ---------- C
+ //  |            | 
+ //  |     ^      | 
+ //  |     |      |
+ //  |     x      | 
+ //  |            |
+ //  |            | 
+ //  A ---------- B        ^ z
+ //                        |
+ //  Avec comme axe :      O--> x
+ //
+ //
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 0.0 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Caillou (fils de root)
+ElementID = 1;
+  BoundingBox =   -15.0 -23.0 -15.0
+                   15.0 -23.0 -15.0
+                   15.0 -23.0  15.0
+                  -15.0 -23.0  15.0
+                  -15.0  2.4  -15.0
+                   15.0  2.4  -15.0
+                   15.0  2.4   15.0
+                  -15.0  2.4   15.0 ;
+  Object3D = stone1.3ds;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0  0.0  0.0   // pos
+                           0.0  0.0  0.0;  // dir
+                           
+  ChildrenNumber = 0;
+  Children = NULL;
+
+EndOfFile
+
+A partir de maintenant on peut mettre tout le texte que l'on veut sans 
+commentaire!!

@@ -1,0 +1,6 @@
+Classe
+membre_de_classe_
+fonction_membre() ; sauf constructeur/destructeur : Ant(...)/~Ant()
+membre_d_enum
+type
+MACRO_DEFINITION

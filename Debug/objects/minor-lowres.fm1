@@ -1,0 +1,61 @@
+///////////////////////////////////////////////////////////////////////////////
+// Définition de l'objet Fourmi
+///////////////////////////////////////////////////////////////////////////////
+// Arbre:
+// root (0)
+//  |
+//  |--- lowres body (1)
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : root (invisible)
+ElementID = 0;
+  BoundingBox =   -2.2  0 -3.0
+                   2.2  0 -3.0
+                   2.2  0  2.5
+                  -2.3  0  2.5
+                  -2.3  1.8 -3.0
+                   2.2  1.8 -3.0
+                   2.2  1.8  2.5
+                  -2.3  1.8  2.5 ;
+  Object3D = NULL;
+  AnimNumber = 1;
+  AnimDefault = default;
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =   0.0 0.0 0.0   // pos
+                            0.0 0.0 0.0;  // dir
+  ChildrenNumber = 1;
+  Children = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Objet : Body (fils de root)
+ElementID = 1;
+  BoundingBox =   -0.5 -0.5 -0.8
+                   0.5 -0.5 -0.8
+                   0.5  0.5 -0.8
+                  -0.5  0.5 -0.8
+                  -0.5 -0.5  0.8
+                   0.5 -0.5  0.8
+                   0.5  0.5  0.8
+                  -0.5  0.5  0.8;
+  Object3D = minor-lowres.3ds;
+  AnimNumber = 1;
+  AnimDefault = default;
+  
+  AnimName= default;
+    AnimNext = NULL;
+    AnimFrameNumber = 1;
+      AnimFramePosition =  0.0   0.850  0.8   // pos
+                           0.05  0.0    0.0;  // dir
+                           
+
+  ChildrenNumber = 0;
+  Children = NULL;
+
+
+EndOfFile
+
+A partir de maintenant on peut mettre tout le texte que l'on veut sans 
+commentaire!!

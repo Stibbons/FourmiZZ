@@ -1,0 +1,18 @@
+créer l'objet 3D et y mettre :
+
+void turn_a_little(const uint Proportion) ;
+// où Proportion est le nombre de frames entre 2 instants de vie
+// la fonction modifie l'angle de l'objet graphique
+// en gros ça fait angle = angle + (way_ - old_way_ ) * 1 / Proportion
+
+pareil pour move_a_little(const uint Proportion) ;
+
+
+OGL : Objet Graphique de Lien
+
+le déplacement est bien régi par un barycentre(?), cependant les phéromones qui n'en sont pas
+ne s'effacent pas
+ce sont des sentiers dans le terrain
+
+Ceci implique des allers et retours incessants (ou  un gran nombre de fourmis) pour qu'elles
+fissent pas prendre le plus court chemin.

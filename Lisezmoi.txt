@@ -1,0 +1,75 @@
+                     IMPORTANT !!
+
+ POUR LA BONNE COMPREHENSION DU PROGRAMME, 
+            LISEZ CE COURT FICHIER
+
+
+FourmiZZ est un petit programme de simulation de 
+fourmilière avec représentation 3D OpenGL.
+L'utilisateur ne peut pas intervenir sur le monde, 
+il ne peut que se balader dedans, pour voir comment 
+les petites fourmis interagissent entres elles.
+
+Pour démarrer, cliquez sur Start.
+Vous pouvez changer quelques options, le bouton Save
+enregistre ces changements dans un fichier.
+
+
+Une fois la simulation lancée, vous êtes en BEEVIEW, 
+en vue libre (abeille).
+
+Les commandes sont:
+- Z : avancer
+- S : reculer
+- Q : aller sur la gauche
+- D : aller sur la droite
+Et la souris controle l'angle 
+(les utilisateurs de Quake-like s'y retrouveront 
+facilement...)
+
+
+
+Vous pouvez vous balader sur tout le long du terrain. 
+Rechercher une bosse pointue, c'est la fourmilière !
+
+Mais l'interet est dans la ScrollView, qui est 
+accessible via la touche "virgule".
+
+Avec cette vue vous pouvez vous déplacer sur la carte 
+grace à la minicarte (ainsi vous remarquerez que le
+monde est spérique...), la fourmilière est au centre 
+de la carte.
+
+Les autres touches sont:
+Z : déplacement vers le Nord
+S : Vers le Sud
+Q : Vers l'Ouest
+D : vers l'Est
+W : Zoom avant
+X : Zoom arriere
+Roulette de la sourie : monter/descendre la caméra
+T : afficher les phéromones (bleu phéromones de
+"passage", rouge phéromones de "Y a de la nouriture
+par là").
+
+
+N'OUBLIEZ PAS: APPUYER SUR LA TOUCHE VIRGULE POUR
+CHANGER DE VUE.
+
+Pour toute réaction, contacter les auteurs
+
+Auteurs:
+DANVIN Yohan
+FARGE Julien
+GOUBE Florent
+SEMET Gaëtan
+
+Projet de prermiere année de l'école isima:
+ISIMA 2003 -- www.isima.fr
+
+
+© 2003 Xeberon -- http://www.xeberon.net
+
+Le programme ainsi que ses sources sont sous licence
+GNU GPL.
+

@@ -1,0 +1,29 @@
+- Charger les préférences dans un .ini 
+	résolution, 
+	nombre de couleur,
+	qualité des textures,
+	(voir complexité des models),
+
+
+void switch_to_2d()
+{
+glMatrixMode( GL_PROJECTION );
+glPushMatrix();
+glLoadIdentity();
+gluOrtho2D( 0, width, 0, height );
+glMatrixMode( GL_MODELVIEW );
+glPushMatrix();
+glLoadIdentity();
+glDisable( GL_LIGHTING );
+glDisable( GL_DEPTH_TEST );
+}
+
+ void switch_to_3d()
+{
+glPopMatrix();
+glMatrixMode( GL_PROJECTION );
+glPopMatrix();
+glMatrixMode( GL_MODELVIEW );
+glEnable( GL_LIGHTING );
+glEnable( GL_DEPTH_TEST );
+}

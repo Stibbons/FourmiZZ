@@ -1,0 +1,8 @@
+pour optimiser les renseignements sur la nourriture, on peut
+ajouter un champ uint number_of_foods dans les secteurs.
+
+AI_ants.cpp (176)
+corriger le truc avec Sector::lose ; aiWorld::next_object et vanish
+si ce n'est pas déjà fait
+
+changer le path créé par une fourmi en une fonction de son poids
